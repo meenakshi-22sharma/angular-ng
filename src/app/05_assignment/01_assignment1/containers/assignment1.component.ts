@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./assignment1.component.css']
 })
 export class Assignment1Component {
-
+ 
+    values = '';
+  
+    onKey(name: HTMLInputElement) { 
+          this.values += (name as HTMLInputElement).value + ' | ';
+    }
 }

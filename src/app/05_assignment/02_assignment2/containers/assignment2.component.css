@@ -3,6 +3,6 @@
   border: 2px solid darkmagenta;
 }
 
-.active {
-  background-color: #0c5460;
+.container > .table > tbody > tr.active td{
+  background-color: #e6ccff !important;
 }

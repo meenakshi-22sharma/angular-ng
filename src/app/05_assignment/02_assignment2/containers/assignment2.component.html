@@ -7,6 +7,21 @@
     <li class="list-group-item">Apply the "active" class to the row when user clicks on it</li>
   </ul>
   <div class="container your-code">
-    <h6>Remove this &lt;h3&gt; and create your HTML here</h6>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <td style="padding:4px 8px" *ngFor="let col of columns">{{col}}</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let char of characters | async ; let i = index" (click)="setClickedRow(i)" [class.active]="i == selectedRow">
+        <td> {{char.id}} </td>
+        <td> {{char.type}} </td>
+        <td> {{char.description}} </td>
+        <td> {{char.completed}} </td>
+      </tr>
+        
+      </tbody>
+    </table>
   </div>
 </div>
